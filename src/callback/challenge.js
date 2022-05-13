@@ -1,4 +1,6 @@
 const XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
+const API = 'https://rickandmortyapi.com/api/character/';
+
 
 function fetchData(url, callback) {
     const xhttp = new XMLHttpRequest();
@@ -15,3 +17,20 @@ function fetchData(url, callback) {
     }
     xhttp.send();
 }
+
+fetchData(API, function(error1, data1) {
+    console.log('Pidiendo personajes...');
+    if (error1) return console.error(error1);
+    fetchData(API + data1.results[0].id, function(error2, data2) {
+        console.log('Pidiendo personaje...');
+        if (error2) return console.error(error2);
+        fetchData(data2.origin.url, function(error3, data3) {
+            console.log('Pidiendo origen...');
+            if (error3) return console.error(error3);
+            console.log('==========');
+            console.log(data1.info.count);
+            console.log(data2.name);
+            console.log(data3.dimension);
+        })
+    })
+})
