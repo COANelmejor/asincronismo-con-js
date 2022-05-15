@@ -8,4 +8,4 @@ Este repo tiene el código de los ejemplos de uso de asincronismo en JavaScript 
 
 * [`Callback`](./src/callback/)
 * [`Promise`](./src/promise/)
-* [`Async/Await`](./src/async-await/)
+* [`Async/Await`](./src/async/)
