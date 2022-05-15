@@ -6,6 +6,6 @@ Basado en el  [Curso de Asincronismo con JavaScript](https://platzi.com/cursos/a
 
 Este repo tiene el código de los ejemplos de uso de asincronismo en JavaScript para:
 
-* `Callback`
-* `Promise` 
-* `Async/Await`.
+* [`Callback`](./src/callback/)
+* [`Promise`](./src/promise/)
+* [`Async/Await`](./src/async-await/)
